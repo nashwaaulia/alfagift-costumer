@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Akun</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+        }
+        
+        .header {
+            background-color: #0d6efd;
+            color: white;
+            padding: 16px;
+        }
+        
+        .profile-card {
+            background-color: white;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 16px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        
+        .user-name {
+            font-size: 1.4rem;
+            font-weight: bold;
+            margin-bottom: 4px;
+        }
+        
+        .user-phone {
+            color: #6c757d;
+            margin-bottom: 16px;
+        }
+        
+        .badge-newbie {
+            background-color: #e9ecef;
+            color: #495057;
+            border-radius: 20px;
+            padding: 6px 12px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+        
+        .join-date {
+            color: #6c757d;
+            font-size: 0.9rem;
+            margin-top: 8px;
+        }
+        
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+            margin: 16px;
+        }
+        
+        .menu-item {
+            background-color: white;
+            border-radius: 8px;
+            padding: 16px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: transform 0.2s;
+        }
+        
+        .menu-item:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        
+        .menu-icon {
+            font-size: 1.5rem;
+            color: #0d6efd;
+            margin-bottom: 8px;
+        }
+        
+        .menu-text {
+            font-weight: 500;
+            font-size: 0.9rem;
+        }
+        
+        .settings-list {
+            background-color: white;
+            border-radius: 8px;
+            margin: 16px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        
+        .settings-item {
+            padding: 16px;
+            border-bottom: 1px solid #f1f1f1;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .settings-item:last-child {
+            border-bottom: none;
+        }
+        
+        .settings-text {
+            font-weight: 500;
+        }
+        
+        .settings-icon {
+            color: #6c757d;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- HEADER -->
+    <div class="header d-flex align-items-center">
+        <a href="home.html" class="text-white fs-4">
+            <i class="bi bi-arrow-left"></i>
+        </a>
+        <h1 class="h5 mb-0 ms-3">Akun</h1>
+    </div>
+
+    <!-- PROFILE CARD -->
+    <div class="profile-card">
+        <div class="user-name">Olivia Rodrigo</div>
+        <div class="user-phone">(+62) 81234567891</div>
+        
+        <div class="d-flex align-items-center">
+            <span class="badge-newbie">NEWBIE</span>
+            <span class="join-date ms-2">Bergabung sejak 20 Agu 2025</span>
+        </div>
+    </div>
+
+    <!-- MENU GRID -->
+    <div class="menu-grid">
+        <div class="menu-item">
+            <div class="menu-icon">
+                <i class="bi bi-star-fill"></i>
+            </div>
+            <div class="menu-text">A-Poin</div>
+        </div>
+        
+        <div class="menu-item">
+            <div class="menu-icon">
+                <i class="bi bi-award-fill"></i>
+            </div>
+            <div class="menu-text">Alfa Star</div>
+        </div>
+        
+        <div class="menu-item">
+            <div class="menu-icon">
+                <i class="bi bi-stamp-fill"></i>
+            </div>
+            <div class="menu-text">Stamp</div>
+        </div>
+        
+        <a href="menambahkanvoucher.html">
+        <div class="menu-item">
+            <div class="menu-icon">
+                <i class="bi bi-ticket-perforated-fill"></i>
+            </div>
+            <div class="menu-text">Voucher</div>
+        </div>
+        </a>
+    </div>
+
+    <!-- SETTINGS LIST -->
+    <div class="settings-list bg-primary bg-opacity-25">
+        <a href ="akun.html">
+        <div class="settings-item">
+            <span class="settings-text">Pengaturan Akun</span>
+            <i class="bi bi-chevron-right settings-icon"></i>
+        </div>
+        </a>
+        
+        <div class="settings-item">
+            <span class="settings-text">Rating & Ulasan</span>
+            <i class="bi bi-chevron-right settings-icon"></i>
+        </div>
+        
+        <div class="settings-item">
+            <span class="settings-text">Atur Notifikasi</span>
+            <i class="bi bi-chevron-right settings-icon"></i>
+        </div>
+        
+        <div class="settings-item">
+            <span class="settings-text">Undang Teman</span>
+            <i class="bi bi-chevron-right settings-icon"></i>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

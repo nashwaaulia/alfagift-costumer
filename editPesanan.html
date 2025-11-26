@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Pesanan</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+        }
+
+        .header {
+            background-color: #0d6efd;
+            color: white;
+            padding: 16px;
+        }
+
+        .section-title {
+            font-size: 1.1rem;
+            font-weight: bold;
+            margin-bottom: 16px;
+        }
+
+        .product-card {
+            background-color: white;
+            border-radius: 8px;
+            padding: 16px;
+            margin-bottom: 16px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        .product-header {
+            font-weight: bold;
+            margin-bottom: 12px;
+        }
+
+        .product-item {
+            display: flex;
+            align-items: center;
+            padding: 12px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .product-item:last-child {
+            border-bottom: none;
+        }
+
+        .product-info {
+            flex-grow: 1;
+            margin-left: 12px;
+        }
+
+        .product-name {
+            font-weight: 500;
+            margin-bottom: 4px;
+        }
+
+        .product-detail {
+            font-size: 0.85rem;
+            color: #6c757d;
+            margin-bottom: 4px;
+        }
+
+        .product-price {
+            font-weight: bold;
+            color: #0d6efd;
+        }
+
+        .quantity-control {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .quantity-btn {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #f8f9fa;
+            border: 1px solid #dee2e6;
+            cursor: pointer;
+        }
+
+        .quantity {
+            font-weight: bold;
+            min-width: 24px;
+            text-align: center;
+        }
+
+        .total-section {
+            background-color: white;
+            border-radius: 8px;
+            padding: 16px;
+            margin-top: 16px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        .total-price {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #0d6efd;
+        }
+
+        .update-btn {
+            background-color: #0d6efd;
+            color: white;
+            border-radius: 8px;
+            padding: 12px;
+            font-weight: 500;
+            width: 100%;
+            border: none;
+            margin-top: 16px;
+        }
+
+        .divider {
+            height: 1px;
+            background-color: #dee2e6;
+            margin: 16px 0;
+        }
+
+        .address-card {
+            background-color: white;
+            border-radius: 8px;
+            padding: 16px;
+            margin-bottom: 16px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        .store-name {
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+
+        .store-address {
+            color: #6c757d;
+            font-size: 0.9rem;
+            line-height: 1.4;
+        }
+
+        .status-badge {
+            background-color: #fff3cd;
+            color: #856404;
+            border-radius: 4px;
+            padding: 8px 12px;
+            font-size: 0.9rem;
+            margin-bottom: 12px;
+            display: inline-block;
+        }
+
+        .out-of-stock {
+            background-color: #f8d7da;
+            color: #721c24;
+        }
+
+        input[type="checkbox"] {
+            transform: scale(1.2);
+            margin-right: 12px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- HEADER -->
+    <div class="header d-flex align-items-center">
+        <a href="javascript:history.back()" class="text-white fs-4">
+            <i class="bi bi-arrow-left"></i>
+        </a>
+        <h1 class="h5 mb-0 ms-3">Edit Pesanan</h1>
+    </div>
+
+    <div class="container-fluid p-3">
+        <!-- ALAMAT TOKO -->
+        <div class="address-card">
+            <div class="store-name">Cluster Crystal Garden - Olivia Rodrigo (Jiana)</div>
+            <div class="store-address">
+                Citraland Pekanbaru, Jl. Soekarno-Hatta No. 11, Tangkerang Barat,<br>
+                Kecamatan Marpoyan Damai, Kota Pekanbaru, Riau.
+            </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <!-- PRODUK 1 - PERBAIKI PRODUK -->
+        <div class="section-title">Perbaiki produk yang tidak valid</div>
+
+        <div class="product-card">
+            <div class="product-item">
+                <input type="checkbox" checked>
+                <div class="product-info">
+                    <div class="product-name">Taro Net Seaweed 119 g</div>
+                    <div class="product-price">Rp 16.500</div>
+                </div>
+                <div class="quantity-control">
+                    <div class="quantity-btn">-</div>
+                    <div class="quantity">2</div>
+                    <div class="quantity-btn">+</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <!-- PRODUK 2 - STOK HABIS -->
+        <div class="section-title">Persediaan stok habis</div>
+
+        <div class="product-card">
+            <div class="status-badge out-of-stock">
+                <i class="bi bi-exclamation-triangle me-1"></i> Stok habis
+            </div>
+            <div class="product-item">
+                <input type="checkbox">
+                <div class="product-info">
+                    <div class="product-name">Guribee Potato Chips Rasa BBQ</div>
+                    <div class="product-detail">Balado 68 g</div>
+                    <div class="product-price">Rp 9.700</div>
+                </div>
+                <div class="quantity-control">
+                    <div class="quantity-btn">-</div>
+                    <div class="quantity">1</div>
+                    <div class="quantity-btn">+</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- TOTAL DAN TOMBOL UPDATE -->
+        <div class="total-section">
+            <div class="d-flex justify-content-between align-items-center">
+                <span>Total:</span>
+                <span class="total-price">Rp 42.700</span>
+            </div>
+            <a href="notifPembeli.html">
+                <button class="update-btn">Perbarui Pesanan</button>
+            </a>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Data produk
+            const products = [
+                {
+                    id: 1,
+                    name: 'Taro Net Seaweed 119 g',
+                    price: 16500,
+                    quantity: 2,
+                    selected: true,
+                    valid: true
+                },
+                {
+                    id: 2,
+                    name: 'Guribee Potato Chips Rasa BBQ',
+                    detail: 'Balado 68 g',
+                    price: 9700,
+                    quantity: 1,
+                    selected: false,
+                    valid: false
+                }
+            ];
+
+            // Elemen DOM
+            const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+            const quantityBtns = document.querySelectorAll('.quantity-btn');
+            const quantityElements = document.querySelectorAll('.quantity');
+            const totalPriceElement = document.querySelector('.total-price');
+
+            // Format angka ke format Rupiah
+            function formatRupiah(amount) {
+                return 'Rp ' + amount.toLocaleString('id-ID');
+            }
+
+            // Hitung total harga
+            function calculateTotal() {
+                let total = 0;
+                products.forEach(product => {
+                    if (product.selected) {
+                        total += product.price * product.quantity;
+                    }
+                });
+                totalPriceElement.textContent = formatRupiah(total);
+            }
+
+            // Update kuantitas produk
+            function updateQuantity(productId, change) {
+                const product = products.find(p => p.id === productId);
+                if (product) {
+                    product.quantity += change;
+                    if (product.quantity < 1) product.quantity = 1;
+
+                    // Update tampilan
+                    const quantityElement = document.querySelector(`.product-item:nth-child(${productId}) .quantity`);
+                    if (quantityElement) {
+                        quantityElement.textContent = product.quantity;
+                    }
+
+                    calculateTotal();
+                }
+            }
+
+            // Event listener untuk checkbox
+            checkboxes.forEach((checkbox, index) => {
+                checkbox.addEventListener('change', function () {
+                    if (index < products.length) {
+                        products[index].selected = this.checked;
+                        calculateTotal();
+                    }
+                });
+            });
+
+            // Event listener untuk tombol kuantitas
+            quantityBtns.forEach(btn => {
+                btn.addEventListener('click', function () {
+                    const productContainer = this.closest('.product-item');
+                    const productIndex = Array.from(document.querySelectorAll('.product-item')).indexOf(productContainer);
+
+                    if (this.textContent === '+') {
+                        updateQuantity(products[productIndex].id, 1);
+                    } else if (this.textContent === '-') {
+                        updateQuantity(products[productIndex].id, -1);
+                    }
+                });
+            });
+
+            // Event listener untuk tombol update
+            document.querySelector('.update-btn').addEventListener('click', function () {
+                alert('Pesanan berhasil diperbarui!');
+                // Di sini biasanya akan ada logika untuk mengirim data ke server
+            });
+
+            // Inisialisasi total
+            calculateTotal();
+        });
+    </script>
+</body>
+
+</html>

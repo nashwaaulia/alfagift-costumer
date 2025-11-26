@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Ringkasan Pesanan</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link href="style/style.css" rel="stylesheet" />  
+
+    <style>
+      :root {
+        --blue: #0d6efd;
+        --bg: #eef5ff;
+      }
+
+      body {
+        background: var(--bg);
+        font-family: Inter, Arial;
+        margin: 0;
+      }
+
+      .topbar {
+        background: var(--blue);
+        color: #fff;
+        padding: 14px 16px;
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+
+      .container-app {
+        width: 100%;
+        padding: 16px;
+        margin: 0 auto;
+      }
+
+      .card-box {
+        background: #fff;
+        border-radius: 12px;
+        padding: 12px;
+        margin-bottom: 14px;
+        box-shadow: 0 2px 8px rgba(13, 110, 253, 0.08);
+      }
+
+      .ship-banner {
+        background: #ffffff;
+        border: 1px solid rgba(13, 110, 253, 0.25);
+        padding: 12px;
+        border-radius: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .product-row {
+        display: flex;
+        justify-content: space-between;
+        gap: 12px;
+        padding: 12px 0;
+        border-bottom: 1px solid #eee;
+      }
+
+      .product-thumb {
+        width: 64px;
+        height: 64px;
+        border-radius: 8px;
+        object-fit: cover;
+      }
+
+      .checkout-bar {
+        background: var(--blue);
+        border-radius: 12px;
+        padding: 14px 18px;
+        color: white;
+        font-weight: 600;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 12px;
+        box-shadow: 0 3px 10px rgba(13, 110, 253, 0.25);
+      }
+
+      .overlay {
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.4);
+        display: none;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        z-index: 2000;
+      }
+
+      .modal-card {
+        background: #fff;
+        padding: 20px;
+        border-radius: 12px;
+        width: 100%;
+        max-width: 420px;
+        position: relative;
+      }
+
+      .close-x {
+        position: absolute;
+        top: 8px;
+        right: 8px;
+        border: none;
+        background: transparent;
+      }
+
+      .radio-row {
+        background: #f0f5ff;
+        padding: 10px;
+        border-radius: 10px;
+        margin-bottom: 8px;
+      }
+
+      @media (min-width: 900px) {
+        .container-app {
+          max-width: 1000px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="topbar">
+      <a href="keranjang.html" class="text-white fs-4">
+      <i class="bi bi-arrow-left fs-5"></i> Ringkasan Pesanan
+      </a>
+    </div>
+
+    <div class="container-app">
+      <div class="card-box">
+        <div class="ship-banner">
+          <span class="fw-bold">Pengiriman Instan</span>
+          <button class="btn btn-outline-primary btn-sm">Atur</button>
+        </div>
+
+        <div class="product-row">
+          <div class="d-flex gap-3">
+            <img
+              src="https://c.alfagift.id/product/1/1_A09870001028_20220722103855483_base.jpg"
+              class="product-thumb"
+            />
+            <div>
+              <div class="fw-semibold">Taro Net Seaweed 119 g</div>
+              <div class="text-primary">Rp 16.500</div>
+            </div>
+          </div>
+          <div class="fw-bold">2x</div>
+        </div>
+
+        <div class="product-row" style="border-bottom: 0">
+          <div class="d-flex gap-3">
+            <img
+              src="https://c.alfagift.id/product/1/1_A7677470001073_20250219114030719_base.png"
+              class="product-thumb"
+            />
+            <div>
+              <div class="fw-semibold">
+                Guribee Potato Chips Rasa BBQ Balado 68 g
+              </div>
+              <div class="text-primary">Rp 9.700</div>
+            </div>
+          </div>
+          <div class="fw-bold">1x</div>
+        </div>
+      </div>
+
+      <div class="card-box">
+        <h5 class="fw-bold">Ringkasan Pesanan</h5>
+
+        <div class="p-2 rounded mb-2" style="border: 1px solid #dce8ff">
+          Reward dari Transaksi ini
+          <span class="text-primary">90 A-Poin</span>
+        </div>
+
+        <div class="d-flex justify-content-between py-1">
+          <span>Subtotal</span> <span>Rp 42.700</span>
+        </div>
+        <div class="d-flex justify-content-between py-1">
+          <span>Diskon</span> <span>Rp 0</span>
+        </div>
+        <div class="d-flex justify-content-between py-1">
+          <span>Voucher</span> <span>Rp 0</span>
+        </div>
+        <div class="d-flex justify-content-between py-1">
+          <span>Total Ongkos Kirim</span> <span>Rp 0</span>
+        </div>
+
+        <hr />
+
+        <div class="d-flex justify-content-between fw-bold py-1">
+          <span>Total Belanja</span> <span>Rp 42.700</span>
+        </div>
+
+        <button id="btnChooseAddress" class="btn btn-light text-start w-100 mt-3">
+          Pilih Alamat <i class="bi bi-chevron-down float-end"></i>
+        </button>
+
+        <button id="btnChoosePayment" class="btn btn-light text-start w-100 mt-3">
+          Pilih Metode Pembayaran <i class="bi bi-chevron-down float-end"></i>
+        </button>
+      </div>
+
+      <div class="checkout-bar">
+        <span>Checkout</span>
+        <span>Rp 42.700</span>
+      </div>
+    </div>
+
+    <div id="overlayAddress" class="overlay">
+      <div class="modal-card">
+        <button class="close-x" id="closeAddress">
+          <i class="bi bi-x-lg fs-5"></i>
+        </button>
+
+        <h5 class="fw-bold mb-2">
+          Cluster Crystal Garden <span class="badge bg-primary">Utama</span>
+        </h5>
+        <div class="small mb-2">Olivia Rodrigo | (+62) 81234567891</div>
+        <div class="small mb-3">
+          Citraland Pekanbaru, Jl Soekarno-Hatta No 11 …
+        </div>
+
+        <input class="form-control mb-3" placeholder="Catatan lokasi..." />
+
+        <div class="text-end">
+          <button class="btn btn-light" id="addressCancel">Batal</button>
+          <button class="btn btn-primary" id="addressSave">Pilih Alamat</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="overlayPayment" class="overlay">
+      <div class="modal-card">
+        <button class="close-x" id="closePayment">
+          <i class="bi bi-x-lg fs-5"></i>
+        </button>
+
+        <h5 class="fw-bold mb-3">Pilih Metode Pembayaran</h5>
+
+        <div class="radio-row">
+          <label class="d-flex justify-content-between">
+            <span>COD</span> <input type="radio" name="pay" />
+          </label>
+        </div>
+
+        <div class="radio-row">
+          <label class="d-flex justify-content-between">
+            <span>DANA</span> <input type="radio" name="pay" />
+          </label>
+        </div>
+
+        <div class="radio-row">
+          <label class="d-flex justify-content-between">
+            <span>GoPay</span> <input type="radio" name="pay" />
+          </label>
+        </div>
+
+        <div class="radio-row">
+          <label class="d-flex justify-content-between">
+            <span>OVO</span> <input type="radio" name="pay" />
+          </label>
+        </div>
+
+        <div class="radio-row mb-3">
+          <label class="d-flex justify-content-between">
+            <span>ShopeePay</span> <input type="radio" name="pay" />
+          </label>
+        </div>
+
+        <div class="text-end">
+          <button class="btn btn-light" id="paymentCancel">Batal</button>
+          <button class="btn btn-primary" id="paymentSave">
+            Pilih Metode
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const overlayAddress = document.getElementById("overlayAddress");
+      const overlayPayment = document.getElementById("overlayPayment");
+
+      document.getElementById("btnChooseAddress").onclick = () =>
+        (overlayAddress.style.display = "flex");
+      document.getElementById("btnChoosePayment").onclick = () =>
+        (overlayPayment.style.display = "flex");
+
+      document.getElementById("closeAddress").onclick =
+        document.getElementById("addressCancel").onclick =
+        document.getElementById("addressSave").onclick =
+          () => (overlayAddress.style.display = "none");
+
+      document.getElementById("closePayment").onclick =
+        document.getElementById("paymentCancel").onclick =
+        document.getElementById("paymentSave").onclick =
+          () => (overlayPayment.style.display = "none");
+    </script>
+  </body>
+</html>
